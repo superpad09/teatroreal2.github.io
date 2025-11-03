@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teatro Real de Madrid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --borgoña: #4a0e15;
+      --oro: #d4af37;
+      --marfil: #f9f6ef;
+      --negro: #1c1c1c;
+    }
+    * {box-sizing: border-box;}
+    html, body {margin: 0; padding: 0; background: var(--marfil); color: var(--negro); font-family: 'Montserrat', sans-serif; line-height: 1.7; scroll-behavior: smooth;}
+    h1, h2, h3, h4 {font-family: 'Playfair Display', serif; color: var(--borgoña); margin-bottom: 15px;}
+    a {color: inherit; text-decoration: none;}
+    nav {background: var(--borgoña); color: var(--marfil); display: flex; justify-content: space-between; align-items: center; padding: 15px 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100;}
+    nav .menu a {margin: 0 15px; font-weight: 600; transition: color 0.3s;}
+    nav .menu a:hover {color: var(--oro);}
+    .logo img {height: 55px;}
+    header.hero {background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://upload.wikimedia.org/wikipedia/commons/e/ea/Teatro_Real_de_Madrid%2C_2016.jpg'); background-size: cover; background-position: center; color: var(--marfil); text-align: center; padding: 160px 20px;}
+    header.hero h1 {font-size: 68px; margin-bottom: 10px; letter-spacing: 1px;}
+    header.hero p {font-size: 22px; max-width: 700px; margin: 0 auto; font-style: italic;}
+    section {padding: 80px 10%; border-bottom: 1px solid rgba(0,0,0,0.1);}
+    .section-title {font-size: 40px; color: var(--borgoña); margin-bottom: 25px; text-align: center; border-bottom: 2px solid var(--oro); display: inline-block; padding-bottom: 10px;}
+    .tabs {display: flex; justify-content: center; gap: 20px; margin-top: 30px;}
+    .tab {background: var(--borgoña); color: var(--marfil); padding: 15px 30px; border-radius: 30px; cursor: pointer; transition: 0.3s;}
+    .tab:hover, .tab.active {background: var(--oro); color: var(--negro);}
+    .tab-content {display: none; margin-top: 40px;}
+    .tab-content.active {display: block; animation: fadeIn 0.6s ease-in-out;}
+    footer {background: var(--negro); color: var(--marfil); text-align: center; padding: 40px 10%;}
+    footer p {margin: 8px 0;}
+    @keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Logo_Teatro_Real.svg/512px-Logo_Teatro_Real.svg.png" alt="Logo Teatro Real"></div>
+    <div class="menu">
+      <a href="#historia">Historia</a>
+      <a href="#programacion">Programación</a>
+      <a href="#visita">Visita</a>
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#cultura">Cultura y Arquitectura</a>
+      <a href="#entradas">Entradas</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#creadores">Creadores</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Teatro Real de Madrid</h1>
+    <p>Donde la ópera, la historia y la excelencia se encuentran</p>
+  </header>
+
+  <section id="historia">
+    <h2 class="section-title">Historia</h2>
+    <p>El Teatro Real de Madrid, inaugurado el 19 de noviembre de 1850 bajo el patrocinio de Isabel II, es una joya arquitectónica y un símbolo del esplendor cultural español. Su historia está marcada por la grandeza artística y la resiliencia frente a los retos políticos, bélicos y sociales que ha enfrentado el país.</p>
+    <p>Concebido originalmente en 1818, el proyecto fue obra de Antonio López Aguado, quien lo diseñó con un estilo neoclásico monumental. Tras interrupciones por la inestabilidad política, el edificio fue completado por Custodio Moreno. Desde su apertura, el Teatro Real se convirtió en el corazón musical de Madrid, acogiendo las más importantes representaciones líricas de Europa.</p>
+    <p>Después de varios cierres, entre ellos el provocado por la Guerra Civil, el teatro reabrió en 1997 tras una profunda restauración que integró tecnología moderna con su estructura original. Hoy en día, su acústica está considerada entre las cinco mejores del mundo y su maquinaria escénica es un referente internacional.</p>
+    <p>Entre los artistas que han pasado por su escenario destacan Plácido Domingo, Montserrat Caballé, María Callas y Jonas Kaufmann. Con una programación que abarca ópera, danza, conciertos y producciones contemporáneas, el Teatro Real continúa siendo el epicentro del arte escénico en España.</p>
+  </section>
+
+  <section id="programacion">
+    <h2 class="section-title">Programación</h2>
+    <p>La temporada actual está dedicada a la riqueza expresiva del compositor húngaro Béla Bartók, figura esencial de la música del siglo XX. Dos de sus obras más poderosas, “El mandarín maravilloso” y “El castillo de Barba Azul”, ocupan un lugar central en la cartelera, presentadas con una puesta en escena renovada y una dirección musical de excelencia.</p>
+
+    <div class="tabs">
+      <div class="tab active" onclick="openTab('mandarin')">El mandarín maravilloso</div>
+      <div class="tab" onclick="openTab('barbaazul')">El castillo de Barba Azul</div>
+    </div>
+
+    <div id="mandarin" class="tab-content active">
+      <h3>El mandarín maravilloso</h3>
+      <p><strong>Compositor:</strong> Béla Bartók (1881–1945)</p>
+      <p><strong>Estreno:</strong> 27 de noviembre de 1926, Colonia, Alemania</p>
+      <p><strong>Director musical:</strong> Pablo Heras-Casado</p>
+      <p><strong>Duración:</strong> 55 minutos</p>
+      <p><strong>Contexto cultural:</strong> Inspirada en la literatura expresionista y el folclore del este de Europa, esta obra representa la tensión entre la vida moderna, la espiritualidad y la violencia urbana. Bartók la compuso en un periodo de intensa transformación social y artística, influido por la industrialización y el conflicto entre el deseo y la moral.</p>
+      <p><strong>Descripción:</strong> “El mandarín maravilloso” es una pantomima escénica de enorme fuerza simbólica. Su música violenta, sensual y salvaje retrata la decadencia moral de una ciudad donde el dinero y el deseo gobiernan las almas. La partitura combina ritmos folclóricos húngaros con la disonancia y la complejidad armónica de la vanguardia europea.</p>
+      <p><strong>Sinopsis extendida:</strong> Tres ladrones manipulan a una joven para atraer víctimas con las que obtener dinero. La aparición de un misterioso mandarín desencadena una historia de deseo sobrenatural y redención. A pesar de ser apuñalado y colgado, el mandarín sobrevive gracias a su amor. Solo cuando la joven corresponde sus sentimientos, la paz llega al espíritu del visitante. Es una metáfora de la pureza que sobrevive a la corrupción.</p>
+      <p><strong>Curiosidades:</strong> Su estreno fue polémico y escandaloso por su erotismo explícito y su crítica moral. Fue prohibida en Hungría durante años. Hoy, se celebra como una de las composiciones más poderosas del siglo XX, admirada por su brutal honestidad y su orquestación exuberante.</p>
+    </div>
+
+    <div id="barbaazul" class="tab-content">
+      <h3>El castillo de Barba Azul</h3>
+      <p><strong>Compositor:</strong> Béla Bartók (1881–1945)</p>
+      <p><strong>Estreno:</strong> 24 de mayo de 1918, Ópera Real de Budapest</p>
+      <p><strong>Director musical:</strong> Gustavo Gimeno</p>
+      <p><strong>Duración:</strong> 1 hora 10 minutos</p>
+      <p><strong>Contexto cultural:</strong> Esta ópera en un acto surge en la Hungría de comienzos del siglo XX, cuando el simbolismo y el psicoanálisis comenzaban a transformar el pensamiento europeo. Bartók y su libretista, Béla Balázs, reinterpretan el mito de Barba Azul como un estudio sobre la soledad, la pasión y los secretos del alma humana.</p>
+      <p><strong>Descripción:</strong> A través de una orquestación sombría y poética, Bartók guía al espectador por las siete puertas del castillo, cada una revelando una faceta del inconsciente: poder, sangre, belleza, amor y muerte. Es una obra introspectiva y trágica que combina el lenguaje musical húngaro con influencias de Debussy y Strauss.</p>
+      <p><strong>Sinopsis extendida:</strong> Judith, impulsada por el amor y la curiosidad, exige a su esposo abrir todas las puertas del castillo. Cada una revela un aspecto oscuro de su vida y de su pasado. La última puerta descubre a las tres esposas anteriores, convertidas en sombras eternas. Judith se une a ellas, y el castillo vuelve a quedar en penumbra. Es una alegoría sobre la imposibilidad de conocer completamente a quien amamos.</p>
+      <p><strong>Curiosidades:</strong> Bartók escribió esta obra con apenas 30 años, inspirándose en la mitología y el psicoanálisis freudiano. Su fracaso inicial se debió a la incomprensión de su simbolismo, pero hoy es considerada una de las óperas más profundas y visionarias del siglo XX.</p>
+    </div>
+  </section>
+
+  <section id="visita">
+    <h2 class="section-title">Visita</h2>
+    <p>Ubicado en la <strong>Plaza de Oriente, s/n, 28013 Madrid</strong>, frente al Palacio Real, el Teatro Real es un punto de encuentro entre historia, arte y modernidad. El acceso es sencillo a través de la estación de <strong>Metro Ópera (Líneas 2, 5 y R)</strong>, situada a pocos metros del edificio.</p>
+    <p>Las visitas guiadas ofrecen la posibilidad de descubrir su espléndido auditorio, la sala de ensayos, los talleres de sastrería y los camerinos donde nacen las grandes producciones. Cada recorrido es una experiencia educativa y artística, revelando secretos de escenografía, acústica y restauración.</p>
+    <p>Además, la tienda del teatro ofrece recuerdos, discos y publicaciones sobre ópera y música clásica, mientras que el restaurante Mirador del Real brinda una experiencia gastronómica con vistas al Palacio Real.</p>
+  </section>
+
+  <section id="cultura">
+    <h2 class="section-title">Cultura y Arquitectura</h2>
+    <p>El Teatro Real combina la solemnidad clásica con la innovación arquitectónica. Su fachada neoclásica esconde un interior renovado con tecnología de vanguardia: el escenario cuenta con plataformas móviles y un sistema de sonido que adapta la acústica según la obra.</p>
+    <p>El edificio ha sido testigo de estrenos históricos y eventos de Estado, incluidos conciertos conmemorativos y ceremonias reales. La lámpara central del auditorio pesa más de dos toneladas y está compuesta por miles de cristales tallados, símbolo del esplendor del arte escénico español.</p>
+    <p>Hoy, el Teatro Real colabora con instituciones internacionales como la Royal Opera House de Londres y el Teatro alla Scala de Milán, consolidándose como un referente cultural europeo.</p>
+  </section>
+
+  <section id="curiosidades">
+    <h2 class="section-title">Curiosidades del Teatro Real</h2>
+    <p>Durante el siglo XIX, los madrileños asistían al teatro luciendo sus mejores galas; los estrenos eran auténticos eventos sociales donde se reunía la nobleza y la intelectualidad de la época. Incluso la reina Isabel II tenía un palco permanente adornado con terciopelos borgoña y brocados dorados.</p>
+    <p>El edificio alberga más de 20.000 metros cuadrados dedicados al arte escénico. Su sistema de tramoya es uno de los más complejos de Europa, capaz de cambiar completamente el decorado en cuestión de segundos. Además, su programa educativo ha formado a generaciones de jóvenes músicos y técnicos teatrales.</p>
+  </section>
+
+  <section id="entradas">
+    <h2 class="section-title">Entradas</h2>
+    <p>Las entradas pueden adquirirse en línea o en taquilla, con opciones de abonos anuales, descuentos para estudiantes y promociones especiales. El Teatro Real recomienda reservar con antelación debido a la alta demanda de sus producciones internacionales.</p>
+    <button style="padding:15px 25px;border:none;border-radius:8px;background:var(--borgoña);color:var(--marfil);font-weight:700;cursor:pointer;">Comprar Entradas</button>
+  </section>
+
+  <section id="contacto">
+    <h2 class="section-title">Contacto</h2>
+    <p><strong>Dirección:</strong> Plaza de Oriente, s/n, 28013 Madrid</p>
+    <p><strong>Metro:</strong> Ópera (Líneas 2, 5 y R)</p>
+    <p><strong>Teléfono:</strong> +34 915 160 660</p>
+    <p><strong>Email:</strong> info@teatroreal.es</p>
+    <p><strong>Horario de taquilla:</strong> Lunes a Domingo, de 10:00 a 20:00</p>
+    <p><strong>Redes sociales:</strong> Facebook · Twitter · Instagram · YouTube</p>
+  </section>
+
+  <section id="creadores">
+    <h2 class="section-title">Creadores de la Página Web</h2>
+    <p>Este sitio web ha sido concebido y diseñado con dedicación y amor por el arte escénico por los siguientes creadores:</p>
+    <ul>
+      <li><strong>Julio García Ibáñez</strong></li>
+      <li><strong>Daniel Alejandro Rivas Laines</strong></li>
+      <li><strong>Emily Casanova Then</strong></li>
+      <li><strong>Diego de la Trinidad Fuentes Campos</strong></li>
+      <li><strong>Dario Serna Cortés</strong></li>
+    </ul>
+    <p>Su trabajo conjunto ha dado vida a una página que busca reflejar la elegancia, historia y grandeza del Teatro Real de Madrid.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Teatro Real — Excelencia artística en el corazón de Madrid.</p>
+    <p>Diseño web inspirado en la grandeza de la ópera y el patrimonio cultural de España.</p>
+  </footer>
+
+  <script>
+    function openTab(id) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
